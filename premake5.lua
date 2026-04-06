@@ -37,4 +37,6 @@ project "spdlog"
         runtime "Release"
         optimize "on"
 
+    filter { "system:windows", "action:vs*" }  -- This is needed that spdlog compiles successfully
+        buildoptions { "/utf-8" }
     filter {}
